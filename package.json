@@ -4,18 +4,26 @@
     "version": "1.0.0",
     "description": "Professional Salesforce DX Starter Template",
     "scripts": {
-        "lint": "eslint **/{aura,lwc}/**/*.js",
-        "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
-        "prepare": "husky",
-        "test:unit:lwc": "sfdx-lwc-jest",
-        "env:setup": "node scripts/setup.js"
+        "prepare": "husky install",
+        "lint": "eslint .",
+        "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,pb,apex,trigger,xml,yaml,yml}\"",
+        "test": "jest --passWithNoTests",
+        "env:setup": "node scripts/setup.js",
+        "release": "commit-and-tag-version"
     },
     "lint-staged": {
         "**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}": [
             "prettier --write"
-        ],
-        "**/{aura,lwc}/**/*.js": [
-            "eslint"
         ]
+    },
+    "devDependencies": {
+        "@prettier/plugin-xml": "^3.4.2",
+        "commit-and-tag-version": "^12.7.1",
+        "eslint": "^8.57.0",
+        "globals": "^15.0.0",
+        "husky": "^9.1.0",
+        "lint-staged": "^16.4.0",
+        "prettier": "^3.8.3",
+        "prettier-plugin-apex": "^2.2.6"
     }
 }
