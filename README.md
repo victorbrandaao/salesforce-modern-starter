@@ -1,18 +1,36 @@
-# Salesforce DX Project: Next Steps
+# ☁️ Salesforce Modern Starter Pack
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+![Salesforce](https://img.shields.io/badge/Salesforce-00A1E0?style=for-the-badge&logo=salesforce&logoColor=white)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
 
-## How Do You Plan to Deploy Your Changes?
+A professional, opinionated boilerplate bringing **Platform Engineering principles** to the Salesforce ecosystem.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+Stop wasting hours configuring linters, formatters, and CI/CD pipelines from scratch. This starter pack provides a highly optimized Developer Experience (DX) out of the box, ensuring code quality and automated validations so you can focus on writing Apex and LWCs.
 
-## Configure Your Salesforce DX Project
+---
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+## ✨ Features (The "Why")
 
-## Read All About It
+-   **Zero-Config Code Quality:** `Prettier` and `ESLint` fully configured with official Salesforce rules.
+-   **Ironclad Commits:** `Husky` and `Lint-Staged` act as gatekeepers, automatically formatting and validating your code _before_ every commit.
+-   **CI/CD Ready:** Includes a robust GitHub Actions workflow (`pr-validation.yml`) that automatically checks code formatting, runs linters, and prepares for LWC Jest testing on every Pull Request.
+-   **Modern DX:** Built for modern Salesforce development using the latest `@salesforce/cli`.
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+---
+
+## 🚀 Getting Started
+
+### 1. Use this Template
+
+Click the green **"Use this template"** button at the top of the repository to create your own project based on this structure.
+
+### 2. Clone and Install
+
+Clone your new repository to your local machine and install the DX dependencies:
+
+```bash
+git clone [https://github.com/YOUR_USERNAME/your-new-repo-name.git](https://github.com/victorbrandaao/salesforce-modern-starter)
+cd your-new-repo-name
+npm install
+```
