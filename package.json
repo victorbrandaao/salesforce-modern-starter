@@ -1,17 +1,20 @@
 {
-  "name": "salesforce-modern-starter",
-  "version": "1.0.0",
-  "description": "Professional Salesforce DX Starter Template with CI/CD and Quality Tools",
-  "scripts": {
-    "lint": "eslint **/*.js",
-    "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
-    "test:unit:lwc": "sfdx-lwc-jest"
-  },
-  "devDependencies": {
-    "@prettier/plugin-xml": "^2.1.0",
-    "@salesforce/eslint-config-lwc": "^3.5.2",
-    "@salesforce/eslint-plugin-lightning": "^1.0.0",
-    "eslint": "^8.57.0",
-    "prettier": "^2.8.8"
-  }
+    "name": "salesforce-modern-starter",
+    "private": true,
+    "version": "1.0.0",
+    "description": "Professional Salesforce DX Starter Template",
+    "scripts": {
+        "lint": "eslint **/{aura,lwc}/**/*.js",
+        "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
+        "prepare": "husky",
+        "test:unit:lwc": "sfdx-lwc-jest"
+    },
+    "lint-staged": {
+        "**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}": [
+            "prettier --write"
+        ],
+        "**/{aura,lwc}/**/*.js": [
+            "eslint"
+        ]
+    }
 }
