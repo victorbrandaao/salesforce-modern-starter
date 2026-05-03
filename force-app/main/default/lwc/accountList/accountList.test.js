@@ -2,14 +2,11 @@ import { createElement } from 'lwc';
 import AccountList from 'c/accountList';
 import getAllAccounts from '@salesforce/apex/AccountService.getAllAccounts';
 
-// Mock Apex method
 jest.mock(
     '@salesforce/apex/AccountService.getAllAccounts',
-    () => {
-        return {
-            default: jest.fn()
-        };
-    },
+    () => ({
+        default: jest.fn()
+    }),
     { virtual: true }
 );
 

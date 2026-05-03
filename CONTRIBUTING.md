@@ -1,103 +1,102 @@
-# 🤝 Diretrizes de Contribuição
+# Contributing / Contribuindo
 
-Obrigado por querer contribuir com o projeto! Este documento fornece diretrizes para ajudar você a começar.
+**[🇬🇧 English](#english) | [🇧🇷 Português](#português)**
 
-## 📋 Antes de Começar
+---
 
-1. Faça um fork do repositório
-2. Clone seu fork localmente
-3. Crie uma branch para sua feature (`git checkout -b feature/sua-feature`)
-4. Instale as dependências (`npm install`)
+## English
 
-## ✅ Checklist de Qualidade
+### Setup
 
-Antes de submeter um Pull Request, certifique-se de:
+```bash
+git clone https://github.com/your-username/salesforce-modern-starter.git
+cd salesforce-modern-starter
+npm install
+```
 
-- [ ] Código formatado com `npm run prettier`
-- [ ] Testes passando com `npm test`
-- [ ] ESLint sem erros com `npm run lint`
-- [ ] Commits com mensagens claras seguindo padrão
-- [ ] Documentação atualizada (JSDoc, comentários)
-- [ ] Sem dependências não necessárias
-- [ ] Sem console.log em código produção
+### Before Submitting a PR
 
-## 📝 Estrutura de Commit
+- `npm run prettier` - Format code
+- `npm run lint` - Check code quality
+- `npm test` - Run tests
+- Keep commits small and focused
+- Write clear commit messages
 
-Siga o padrão de commits semânticos:
+### Commit Message Format
+
+```
+<type>(<scope>): <description>
+
+<optional body>
+```
+
+**Types:** feat, fix, test, docs, ci, refactor, chore, style
+
+**Examples:**
+
+```bash
+git commit -m "feat(accountService): add new query method"
+git commit -m "fix(accountList): resolve loading state bug"
+git commit -m "test(accountList): add Jest tests for edge cases"
+```
+
+### Code Style
+
+- Use `with sharing` in public Apex classes
+- Keep methods small and focused
+- Add meaningful comments only when needed
+- Follow Salesforce naming conventions
+- Use proper error handling
+
+---
+
+## Português
+
+### Setup
+
+```bash
+git clone https://github.com/seu-usuario/salesforce-modern-starter.git
+cd salesforce-modern-starter
+npm install
+```
+
+### Antes de Enviar um PR
+
+- `npm run prettier` - Formatar código
+- `npm run lint` - Verificar qualidade
+- `npm test` - Executar testes
+- Mantenha commits pequenos e focados
+- Escreva mensagens de commit claras
+
+### Formato de Mensagem de Commit
 
 ```
 <tipo>(<escopo>): <descrição>
 
 <corpo opcional>
-<rodapé opcional>
 ```
 
-### Tipos de Commit
+**Tipos:** feat, fix, test, docs, ci, refactor, chore, style
 
-| Tipo     | Descrição                           |
-| -------- | ----------------------------------- |
-| feat     | Nova funcionalidade                 |
-| fix      | Correção de bug                     |
-| test     | Adição ou modificação de testes     |
-| docs     | Documentação apenas                 |
-| style    | Formatação e estilos                |
-| ci       | Configuração de CI/CD               |
-| chore    | Alterações de build ou dependências |
-| refactor | Refatoração de código               |
-
-### Exemplos
+**Exemplos:**
 
 ```bash
-# Feature nova
-git commit -m "feat(accountList): add search functionality"
-
-# Correção de bug
-git commit -m "fix(accountService): prevent null pointer exception"
-
-# Testes
-git commit -m "test(accountList): add jest tests for error handling"
-
-# Documentação
-git commit -m "docs: add API documentation for AccountService"
-
-# CI/CD
-git commit -m "ci: add code coverage threshold to GitHub Actions"
+git commit -m "feat(accountService): add new query method"
+git commit -m "fix(accountList): resolve loading state bug"
+git commit -m "test(accountList): add Jest tests for edge cases"
 ```
 
-## 🎯 Diretrizes de Feature
+### Estilo de Código
 
-### Para Apex
+- Use `with sharing` em classes Apex públicas
+- Mantenha métodos pequenos e focados
+- Adicione comentários apenas quando necessário
+- Siga convenções de nomenclatura Salesforce
+- Use tratamento de erros apropriado
 
-```apex
-/**
- * @description Clear description of what the method does
- * @param paramName Description of parameter
- * @return Description of return value
- * @throws ExceptionType When this exception is thrown
- */
-public static ReturnType methodName(ParamType paramName) {
-    // Implementation
-}
-```
+---
 
-### Para LWC
-
-```javascript
-/**
- * @description Component purpose and behavior
- * @fires eventName - Description of event
- */
-export default class ComponentName extends LightningElement {
-    @track trackableVariable;
-    @api apiProperty;
-
-    connectedCallback() {
-        // Lifecycle
-    }
-}
-```
-
-### Para Testes
+**Thank you for contributing! / Obrigado por contribuir!**
 
 ```javascript
 describe('c-component-name', () => {

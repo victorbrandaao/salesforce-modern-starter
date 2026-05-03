@@ -1,34 +1,108 @@
-# ☁️ Salesforce Modern Starter Pack
-
-_Leia em / Read in: [English](#english) | [Português](#português)_
+# ☁️ Salesforce Modern Starter
 
 ![Salesforce](https://img.shields.io/badge/Salesforce-00A1E0?style=for-the-badge&logo=salesforce&logoColor=white)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
+
+**[🇬🇧 English](#-english) | [🇧🇷 Português](#-português)**
 
 ---
 
-## <a name="english"></a> 🇬🇧 English
+## 🇬🇧 English
 
-A professional, opinionated boilerplate bringing **Platform Engineering principles** to the Salesforce ecosystem.
-
-Stop wasting hours configuring linters, formatters, and CI/CD pipelines from scratch. This starter pack provides a highly optimized Developer Experience (DX) out of the box, ensuring code quality and automated validations so you can focus on writing Apex and LWCs.
+Professional starter template for Salesforce DX with built-in code quality, CI/CD automation, and modern development practices.
 
 ### ✨ Features
 
--   **Zero-Config Code Quality:** `Prettier` and `ESLint` fully configured with official Salesforce rules.
--   **Ironclad Commits:** `Husky` and `Lint-Staged` act as gatekeepers, automatically formatting and validating your code _before_ every commit.
--   **CI/CD Ready:** Includes a robust GitHub Actions workflow that automatically validates code formatting and runs LWC Jest testing on every Pull Request.
--   **One-Click Environment Setup:** Run a single command (`npm run env:setup`) to automatically create a Scratch Org, push the source code, assign permission sets, import mock data, and open the browser.
--   **Tailwind CSS Ready:** Stop fighting bundlers. This template includes a pre-configured architecture to use Tailwind CSS natively inside Lightning Web Components via Static Resources.
+- **Code Quality**: Prettier + ESLint pre-configured
+- **Pre-commit Hooks**: Husky validates every commit
+- **CI/CD Ready**: GitHub Actions for testing and deployment
+- **Lightning Web Components**: Tailwind CSS integrated
+- **Tests**: Jest for LWC unit testing
+- **Best Practices**: Handler pattern, with sharing, proper conventions
 
-### 🚀 Getting Started
-
-1. **Use this Template:** Click the green **"Use this template"** button to create your own project.
-2. **Clone and Install:**
+### 🚀 Quick Start
 
 ```bash
-git clone [https://github.com/YOUR_USERNAME/your-new-repo-name.git](https://github.com/YOUR_USERNAME/your-new-repo-name.git)
-cd your-new-repo-name
+git clone https://github.com/your-username/salesforce-modern-starter.git
+cd salesforce-modern-starter
 npm install
+npm run env:setup
 ```
+
+### 📦 Scripts
+
+```bash
+npm run prettier       # Format code
+npm run lint          # Check code quality
+npm test              # Run tests
+npm run env:setup     # Create Scratch Org
+```
+
+### 🏗️ Structure
+
+```
+force-app/
+├── classes/          # Apex classes
+├── lwc/             # Lightning Web Components
+├── triggers/        # Apex triggers
+└── permissionsets/  # Permissions
+```
+
+---
+
+## 🇧🇷 Português
+
+Template profissional para Salesforce DX com qualidade de código, CI/CD e desenvolvimento moderno.
+
+### ✨ Funcionalidades
+
+- **Qualidade de Código**: Prettier + ESLint pré-configurados
+- **Git Hooks**: Husky valida cada commit
+- **CI/CD Pronto**: GitHub Actions para testes e deploy
+- **Lightning Web Components**: Tailwind CSS integrado
+- **Testes**: Jest para testes unitários LWC
+- **Melhores Práticas**: Padrão handler, with sharing, convenções
+
+### 🚀 Início Rápido
+
+```bash
+git clone https://github.com/seu-usuario/salesforce-modern-starter.git
+cd salesforce-modern-starter
+npm install
+npm run env:setup
+```
+
+### 📦 Scripts
+
+```bash
+npm run prettier       # Formatar código
+npm run lint          # Verificar qualidade
+npm test              # Executar testes
+npm run env:setup     # Criar Scratch Org
+```
+
+### 🏗️ Estrutura
+
+```
+force-app/
+├── classes/          # Classes Apex
+├── lwc/             # Lightning Web Components
+├── triggers/        # Apex triggers
+└── permissionsets/  # Permissões
+```
+
+---
+
+## 📚 Documentação
+
+- [DEVELOPMENT.md](DEVELOPMENT.md) - Arquitetura e exemplos
+- [CODE_EXAMPLES.md](CODE_EXAMPLES.md) - Exemplos práticos
+- [CONTRIBUTING.md](CONTRIBUTING.md) - Como contribuir
+
+## 📝 Licença
+
+MIT - Sinta-se livre para usar este template em seus projetos
+
+---
+
+**Made with ❤️ for Salesforce developers**

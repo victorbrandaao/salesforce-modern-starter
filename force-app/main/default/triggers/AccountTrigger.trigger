@@ -1,10 +1,3 @@
-/**
- * @description Trigger handler for Account sobject
- * Implements business logic for Account records
- *
- * @author Modern Starter
- * @since v1.0.0
- */
 trigger AccountTrigger on Account(
     before insert,
     before update,
