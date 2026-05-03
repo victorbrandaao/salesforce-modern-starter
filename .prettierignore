@@ -7,5 +7,6 @@
 .sfdx
 .sf
 .vscode
+force-app/main/default/staticresources/**
 
 coverage/
