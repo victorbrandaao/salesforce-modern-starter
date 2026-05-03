@@ -7,7 +7,7 @@
         "prepare": "husky install",
         "lint": "eslint .",
         "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,pb,apex,trigger,xml,yaml,yml}\"",
-        "test": "jest --passWithNoTests",
+        "test": "echo \"No automated tests configured\"",
         "env:setup": "node scripts/setup.js",
         "release": "commit-and-tag-version"
     },

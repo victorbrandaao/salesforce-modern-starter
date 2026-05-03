@@ -1,26 +1,12 @@
-# ☁️ Salesforce Modern Starter
+# Salesforce Modern Starter
 
-![Salesforce](https://img.shields.io/badge/Salesforce-00A1E0?style=for-the-badge&logo=salesforce&logoColor=white)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
+Starter enxuto para Salesforce DX com Apex, automação básica de qualidade e setup simples para Scratch Org.
 
-**[🇬🇧 English](#-english) | [🇧🇷 Português](#-português)**
+## English
 
----
+Use this template to bootstrap Salesforce projects with a clean structure, linting, formatting, and scratch org automation.
 
-## 🇬🇧 English
-
-Professional starter template for Salesforce DX with built-in code quality, CI/CD automation, and modern development practices.
-
-### ✨ Features
-
-- **Code Quality**: Prettier + ESLint pre-configured
-- **Pre-commit Hooks**: Husky validates every commit
-- **CI/CD Ready**: GitHub Actions for testing and deployment
-- **Lightning Web Components**: Tailwind CSS integrated
-- **Tests**: Jest for LWC unit testing
-- **Best Practices**: Handler pattern, with sharing, proper conventions
-
-### 🚀 Quick Start
+### Quick start
 
 ```bash
 git clone https://github.com/your-username/salesforce-modern-starter.git
@@ -29,41 +15,20 @@ npm install
 npm run env:setup
 ```
 
-### 📦 Scripts
+### Scripts
 
 ```bash
-npm run prettier       # Format code
-npm run lint          # Check code quality
-npm test              # Run tests
-npm run env:setup     # Create Scratch Org
+npm run prettier
+npm run lint
+npm test
+npm run env:setup
 ```
 
-### 🏗️ Structure
+## Português
 
-```
-force-app/
-├── classes/          # Apex classes
-├── lwc/             # Lightning Web Components
-├── triggers/        # Apex triggers
-└── permissionsets/  # Permissions
-```
+Use este template para iniciar projetos Salesforce com estrutura limpa, lint, formatação e automação de Scratch Org.
 
----
-
-## 🇧🇷 Português
-
-Template profissional para Salesforce DX com qualidade de código, CI/CD e desenvolvimento moderno.
-
-### ✨ Funcionalidades
-
-- **Qualidade de Código**: Prettier + ESLint pré-configurados
-- **Git Hooks**: Husky valida cada commit
-- **CI/CD Pronto**: GitHub Actions para testes e deploy
-- **Lightning Web Components**: Tailwind CSS integrado
-- **Testes**: Jest para testes unitários LWC
-- **Melhores Práticas**: Padrão handler, with sharing, convenções
-
-### 🚀 Início Rápido
+### Início rápido
 
 ```bash
 git clone https://github.com/seu-usuario/salesforce-modern-starter.git
@@ -72,37 +37,25 @@ npm install
 npm run env:setup
 ```
 
-### 📦 Scripts
+### Scripts
 
 ```bash
-npm run prettier       # Formatar código
-npm run lint          # Verificar qualidade
-npm test              # Executar testes
-npm run env:setup     # Criar Scratch Org
+npm run prettier
+npm run lint
+npm test
+npm run env:setup
 ```
 
-### 🏗️ Estrutura
+## Estrutura
 
-```
+```text
 force-app/
-├── classes/          # Classes Apex
-├── lwc/             # Lightning Web Components
-├── triggers/        # Apex triggers
-└── permissionsets/  # Permissões
+├── main/default/classes/
+├── main/default/triggers/
+├── main/default/permissionsets/
+└── main/default/lwc/
 ```
 
----
+## Licença
 
-## 📚 Documentação
-
-- [DEVELOPMENT.md](DEVELOPMENT.md) - Arquitetura e exemplos
-- [CODE_EXAMPLES.md](CODE_EXAMPLES.md) - Exemplos práticos
-- [CONTRIBUTING.md](CONTRIBUTING.md) - Como contribuir
-
-## 📝 Licença
-
-MIT - Sinta-se livre para usar este template em seus projetos
-
----
-
-**Made with ❤️ for Salesforce developers**
+MIT
