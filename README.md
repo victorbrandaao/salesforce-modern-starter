@@ -6,7 +6,7 @@
 
 A professional, opinionated boilerplate bringing **Platform Engineering principles** to the Salesforce ecosystem.
 
-Stop wasting hours configuring linters, formatters, and CI/CD pipelines from scratch. This starter pack provides a highly optimized Developer Experience (DX) out of the box, ensuring code quality and automated validations so you can focus on writing Apex and LWCs.
+Stop wasting hours configuring linters, formatters, and CI/CD pipelines from scratch. This starter pack provides a highly optimized Developer Experience (DX) out of the box, ensuring code quality and automated validations so you can focus on writing Apex and LWCs...
 
 ---
 
