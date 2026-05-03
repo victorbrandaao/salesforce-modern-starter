@@ -7,7 +7,8 @@
         "lint": "eslint **/{aura,lwc}/**/*.js",
         "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
         "prepare": "husky",
-        "test:unit:lwc": "sfdx-lwc-jest"
+        "test:unit:lwc": "sfdx-lwc-jest",
+        "env:setup": "node scripts/setup.js"
     },
     "lint-staged": {
         "**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}": [

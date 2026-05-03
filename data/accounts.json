@@ -1,0 +1,14 @@
+{
+    "records": [
+        {
+            "attributes": { "type": "Account", "referenceId": "acc1" },
+            "Name": "Acme Corporation",
+            "Phone": "(555) 123-4567"
+        },
+        {
+            "attributes": { "type": "Account", "referenceId": "acc2" },
+            "Name": "Global Tech Platform",
+            "Phone": "(555) 987-6543"
+        }
+    ]
+}
