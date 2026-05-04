@@ -66,10 +66,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Salesforce CLI
-        uses: salesforcecli/setup-cli@v1
-        with:
-          cli-version: latest
+      - name: Install Salesforce CLI
+        run: npm install -g @salesforce/cli
 
       - name: Validate project structure
         run: sf project list
