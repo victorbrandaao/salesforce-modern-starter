@@ -2,33 +2,20 @@
 
 ![Salesforce](https://img.shields.io/badge/Salesforce-00A1E0?style=for-the-badge&logo=salesforce&logoColor=white) ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
 
-Um template enxuto para iniciar projetos com Salesforce DX: estrutura clara, práticas básicas de qualidade de código e script de setup para Scratch Orgs.
+Template enxuto para Salesforce DX: estrutura organizada, boas praticas e script de setup para criar e popular Scratch Orgs rapidamente.
 
 ---
 
-## English — Quick summary
+## English
 
-A compact starter for Salesforce DX that provides a clean project layout, linting, formatting and a simple scratch-org setup script. Focus on building features, not configuration.
+Lean Salesforce DX starter with a clean project layout, linting, formatting, and a simple scratch-org setup script. Build features, not scaffolding.
 
-# Salesforce Modern Starter
-
-![Salesforce](https://img.shields.io/badge/Salesforce-00A1E0?style=for-the-badge&logo=salesforce&logoColor=white) ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
-
-Um template enxuto para iniciar projetos com Salesforce DX: estrutura clara, práticas de qualidade e scripts para criar e popular Scratch Orgs rapidamente.
-
----
-
-## English — Quick summary
-
-A compact starter for Salesforce DX that provides a clean project layout, linting, formatting and a simple scratch-org setup script. Focus on building features, not configuration.
-
-### Key features
+### Highlights
 
 - Minimal, production-minded structure (Apex, Triggers, LWC, Permission Sets)
 - Prettier + ESLint configured
 - Pre-commit hooks with Husky
-- Script to create a Scratch Org and deploy quickly
-- Small, focused example code using handler patterns
+- Scratch Org setup + deploy script
 
 ### Quick start
 
@@ -39,7 +26,7 @@ npm install
 npm run env:setup
 ```
 
-### Useful scripts
+### Scripts
 
 - `npm run prettier` — format code
 - `npm run lint` — run ESLint
@@ -48,19 +35,18 @@ npm run env:setup
 
 ---
 
-## Português — Resumo rápido
+## Portugues
 
-Template enxuto para Salesforce DX com estrutura organizada, lint e formatação prontos, e script para criação de Scratch Org. Ideal para iniciar projetos seguindo boas práticas.
+Starter leve para Salesforce DX com estrutura clara, lint e formatacao prontos, e script para criar Scratch Org e fazer deploy rapido.
 
-### Principais pontos
+### Destaques
 
-- Estrutura enxuta: Apex, Triggers, LWC, Permission Sets
-- Prettier + ESLint já configurados
+- Estrutura enxuta (Apex, Triggers, LWC, Permission Sets)
+- Prettier + ESLint configurados
 - Husky para hooks locais
-- Script de setup para Scratch Org e deploy rápido
-- Código de exemplo pequeno e localizado
+- Script de setup + deploy
 
-### Início rápido
+### Inicio rapido
 
 ```bash
 git clone https://github.com/seu-usuario/salesforce-modern-starter.git
@@ -69,9 +55,9 @@ npm install
 npm run env:setup
 ```
 
-### Scripts úteis
+### Scripts
 
-- `npm run prettier` — formata o código
+- `npm run prettier` — formata o codigo
 - `npm run lint` — executa ESLint
 - `npm test` — placeholder (sem testes automáticos configurados)
 - `npm run env:setup` — cria scratch org, deploy e popula dados de exemplo
@@ -90,8 +76,8 @@ force-app/
 
 ## Como contribuir
 
-Veja o guia resumido em `CONTRIBUTING.md`. Faça PRs pequenas, execute `npm run prettier` e `npm run lint` antes de abrir o PR.
+Veja o guia em [CONTRIBUTING.md](CONTRIBUTING.md). Faça PRs pequenas e rode `npm run prettier` e `npm run lint` antes de abrir o PR.
 
-## Licença
+## Licenca
 
 MIT
