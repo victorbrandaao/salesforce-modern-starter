@@ -1,6 +1,6 @@
 public with sharing class AccountService {
     public static List<Account> getAllAccounts() {
-        return [SELECT Id, Name, Phone, Email__c, Industry FROM Account ORDER BY Name ASC];
+        return [SELECT Id, Name, Phone, Industry FROM Account ORDER BY Name ASC];
     }
 
     public static List<Account> getAccountsByIndustry(String industry) {
@@ -8,7 +8,7 @@ public with sharing class AccountService {
             return new List<Account>();
         }
         return [
-            SELECT Id, Name, Phone, Email__c, Industry
+            SELECT Id, Name, Phone, Industry
             FROM Account
             WHERE Industry = :industry
             ORDER BY Name ASC
