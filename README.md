@@ -8,9 +8,7 @@ Template enxuto para Salesforce DX: estrutura organizada, boas práticas de enge
 
 ## Demo (vídeo)
 
-Assista ao vídeo de demonstração:
-
-- [`linkedin-video.mp4`](./linkedin-video.mp4)
+![Demo](./linkedin-video.gif)
 
 ---
 
