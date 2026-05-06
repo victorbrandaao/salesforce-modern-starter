@@ -6,6 +6,14 @@ Template enxuto para Salesforce DX: estrutura organizada, boas práticas de enge
 
 ---
 
+## Demo (vídeo)
+
+Assista ao vídeo de demonstração:
+
+- [`linkedin-video.mp4`](./linkedin-video.mp4)
+
+---
+
 ## English
 
 Lean Salesforce DX starter with a clean project layout, linting, formatting, and simple scratch-org automation. Build features, not scaffolding.
