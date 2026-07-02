@@ -5,9 +5,12 @@
     "description": "Professional Salesforce DX Starter Template",
     "scripts": {
         "prepare": "husky install",
-        "lint": "eslint .",
+        "lint": "eslint . --ext .js",
         "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,pb,apex,trigger,xml,yaml,yml}\"",
-        "test": "echo \"No automated tests configured\"",
+        "prettier:check": "prettier --check \"**/*.{cls,cmp,component,css,html,js,json,md,page,pb,apex,trigger,xml,yaml,yml}\"",
+        "test": "npm run test:apex",
+        "test:apex": "sf project deploy validate --source-dir force-app --test-level RunSpecifiedTests --tests AccountServiceTest --tests AccountTriggerHandlerTest --wait 10",
+        "validate": "npm run lint && npm run prettier:check && npm test",
         "env:setup": "node scripts/setup.js",
         "release": "commit-and-tag-version"
     },

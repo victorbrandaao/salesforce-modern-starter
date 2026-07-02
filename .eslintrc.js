@@ -4,7 +4,7 @@ module.exports = {
         es2021: true,
         node: true
     },
-    ignorePatterns: ['**/lwc/**'],
+    ignorePatterns: ['node_modules/**', 'force-app/main/default/staticresources/**'],
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module'

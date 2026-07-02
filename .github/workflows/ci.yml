@@ -1,77 +1,71 @@
-name: Code Quality & Tests
+name: CI
 
 on:
   pull_request:
-    branches: [main, develop]
   push:
-    branches: [main, develop]
+    branches:
+      - main
 
 jobs:
-  code-quality:
+  quality:
+    name: Quality checks
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18.x, 20.x]
-
     steps:
-      - name: Checkout code
+      - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js ${{ matrix.node-version }}
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+          node-version: 20
+          cache: npm
 
       - name: Install dependencies
-        run: npm ci --ignore-scripts
-
-      - name: Run Prettier format check
-        run: npm run prettier -- --check
+        run: npm ci
 
       - name: Run ESLint
         run: npm run lint
-        continue-on-error: true
 
-  test:
+      - name: Check formatting
+        run: npm run prettier:check
+
+  salesforce:
+    name: Salesforce validation
     runs-on: ubuntu-latest
+    needs: quality
+    if: ${{ vars.SF_RUN_VALIDATION == 'true' }}
 
     steps:
-      - name: Checkout code
+      - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20.x
-          cache: 'npm'
+          node-version: 20
+          cache: npm
 
       - name: Install dependencies
-        run: npm ci --ignore-scripts
-
-      - name: Run Jest tests
-        run: npm test -- --coverage --watchAll=false
-        continue-on-error: true
-
-      - name: Upload coverage reports
-        uses: codecov/codecov-action@v3
-        if: always()
-        continue-on-error: true
-
-  validate-sfdx:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+        run: npm ci
 
       - name: Install Salesforce CLI
-        run: npm install -g @salesforce/cli
+        run: npm install --global @salesforce/cli
 
-      - name: Validate project structure
-        run: sf project list
+      - name: Create JWT key file
+        run: printf '%s' "$SF_JWT_KEY" > server.key
+        env:
+          SF_JWT_KEY: ${{ secrets.SF_JWT_KEY }}
 
-      - name: Check for metadata syntax errors
-        run: sf plugins install @salesforce/cli-plugins-sfdx-migration-assistant
-        continue-on-error: true
+      - name: Authenticate Dev Hub
+        run: sf org login jwt --client-id "$SF_CLIENT_ID" --jwt-key-file server.key --username "$SF_USERNAME" --set-default-dev-hub
+        env:
+          SF_CLIENT_ID: ${{ secrets.SF_CLIENT_ID }}
+          SF_USERNAME: ${{ secrets.SF_USERNAME }}
+
+      - name: Create scratch org, deploy, and test
+        run: SCRATCH_ORG_ALIAS=ci-org SCRATCH_ORG_DURATION=1 SKIP_ORG_OPEN=true npm run env:setup
+
+      - name: Delete scratch org
+        if: always()
+        run: sf org delete scratch --target-org ci-org --no-prompt
