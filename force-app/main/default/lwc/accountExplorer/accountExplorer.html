@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Account Explorer" icon-name="standard:account">
+        <div class="slds-p-around_medium account-explorer">
+            <template lwc:if="{hasAccounts}">
+                <lightning-datatable
+                    key-field="Id"
+                    data="{accountsData}"
+                    columns="{columns}"
+                    hide-checkbox-column
+                >
+                </lightning-datatable>
+            </template>
+
+            <template lwc:elseif="{errorMessage}">
+                <div class="slds-text-color_error" role="alert">{errorMessage}</div>
+            </template>
+
+            <template lwc:elseif="{isLoaded}">
+                <p>No accounts found.</p>
+            </template>
+
+            <template lwc:else>
+                <lightning-spinner alternative-text="Loading accounts"></lightning-spinner>
+            </template>
+        </div>
+    </lightning-card>
+</template>
